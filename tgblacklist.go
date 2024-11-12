@@ -14,7 +14,7 @@ func SetStrategy(s string) (string, error) {
 		strategy = s
 		return strategy, nil
 	} else {
-		return "", fmt.Errorf("Invalid strategy: %s", s)
+		return "", fmt.Errorf("invalid strategy: %s", s)
 	}
 }
 
@@ -32,7 +32,7 @@ func IsBlocked(username string) (bool, error) {
 		}
 		return !inWL, nil
 	} else {
-		return false, fmt.Errorf("Strategy not set")
+		return false, fmt.Errorf("strategy not set")
 	}
 }
 
