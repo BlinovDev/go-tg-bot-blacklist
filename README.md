@@ -16,6 +16,9 @@ In your code set strategy and use public methods:
 // SET STRATEGY
 tgblacklist.SetStrategy("BL")
 
+// ADD USER TO LIST
+tgblacklist.AddToList("BotFather") // no @ in the beginning
+
 // CHECK IF USER CAN CONTINUE
 username := message.From.UserName
 blocked, _ := tgblacklist.IsBlocked(username)
@@ -31,4 +34,4 @@ if blocked {
 - [x] Add user to BL;
 - [ ] Return user_names from BL;
 - [ ] Delete user from BL after set time(optional);
-- [ ] Describe all public methods for better user expirience;
+- [ ] Describe all public methods for better user experience;
